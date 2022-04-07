@@ -1,0 +1,20 @@
+{
+  "acrylicOpacity": 0.90000000000000002,
+  "altGrAliasing": true,
+  "antialiasingMode": "grayscale",
+  "closeOnExit": "graceful",
+  "colorScheme": "Custom",
+  "commandline": "pwsh.exe -NoExit -Command \"&{ $vsInstallPath=& \"${env:ProgramFiles(x86)}/'Microsoft Visual Studio'/Installer/vswhere.exe\" -prerelease -latest -property installationPath; Import-Module \"$vsInstallPath/Common7/Tools/Microsoft.VisualStudio.DevShell.dll\"; Enter-VsDevShell -VsInstallPath $vsInstallPath -SkipAutomaticLocation }\"",
+  "cursorShape": "bar",
+  "font": {
+    "face": "MesloLGMDZ NF",
+    "size": 12
+  },
+  "guid": "{00000000-0000-0000-0000-000000000000}",
+  "historySize": 9001,
+  "icon": "ms-appx:///ProfileIcons/pwsh.scale-100.png ",
+  "name": "Developer shell",
+  "padding": "8",
+  "snapOnInput": true,
+  "useAcrylic": true
+}

@@ -1,0 +1,95 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "blocks": [
+    {
+      "alignment": "left",
+      "type": "prompt",
+      "segments": [
+        {
+          "background": "p:blacker",
+          "foreground": "p:green",
+          "leading_diamond": "\ue0b6",
+          "style": "diamond",
+          "template": "{{ .UserName }}@{{ .HostName }} ",
+          "type": "session"
+        },
+        {
+          "type": "root",
+          "style": "powerline",
+          "powerline_symbol": "\ue0b0",
+          "foreground": "p:red",
+          "background": "p:blacker",
+          "properties": {
+            "root icon": "\uf292"
+          }
+        },
+        {
+          "type": "python",
+          "style": "powerline",
+          "powerline_symbol": "\uE0B0",
+          "background": "p:blacker",
+          "foreground": "p:green",
+          "template": "\uE235 {{ .Full }} "
+        },
+        {
+          "type": "path",
+          "style": "powerline",
+          "background": "p:path-bg",
+          "foreground": "p:white",
+          "template": " {{ .Path }} ",
+          "powerline_symbol": "\ue0b0",
+          "properties": {
+            "folder_icon": "\uf115",
+            "folder_separator_icon": " \ue0b1 ",
+            "home_icon": "\uf7db",
+            "style": "full",
+            "enable_hyperlink": true
+          }
+        },
+        {
+          "type": "git",
+          "style": "powerline",
+          "powerline_symbol": "\ue0b0",
+          "background": "p:git-bg-ok",
+          "foreground": "p:git-fg-black",
+          "properties": {
+            "fetch_stash_count": true
+          },
+          "template": " on {{ .HEAD }} {{ .BranchStatus }}{{ if gt .StashCount 0}} \uF692 {{ .StashCount }}{{ end }}"
+        }
+      ]
+    },
+    {
+      "alignment": "right",
+      "type": "rprompt",
+      "segments": [
+        {
+          "background": "p:time-bg",
+          "foreground": "p:white",
+          "trailing_diamond": "\ue0b4",
+          "leading_diamond": "\ue0b6",
+          "properties": {
+            "time_format": "3:04 PM"
+          },
+          "style": "diamond",
+          "template": " \uf017 {{ .CurrentDate | date .Format }} ",
+          "type": "time"
+        }
+      ]
+    }
+  ],
+  "console_title_template": "{{ .Shell }} in {{ .Folder }}",
+  "final_space": true,
+  "palette": {
+    "black": "#262B44",
+    "white": "#eeeeee",
+    "blacker": "#1d2134",
+    "path-bg": "#3e4f82",
+    "time-bg": "#33658A",
+    "red": "#aa142d",
+    "green": "#45F1C2",
+    "git-bg-ok": "#56d2b1",
+    "git-fg-black": "p:black"
+  },
+  "version": 2
+}
