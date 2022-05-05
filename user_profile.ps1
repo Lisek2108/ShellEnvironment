@@ -15,8 +15,8 @@ Set-PSReadLineOption -PredictionSource History
 Set-PSReadLineOption -PredictionViewStyle ListView
 
 # Fuzzy finder
-Import-Module PsFzf
-Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+f' -PSReadlineChordReverseHistory 'Ctrl+r'
+Import-Module PSFzf
+Set-PSFzfOption -PSReadlineChordProvider 'Ctrl+f' -PSReadlineChordReverseHistory 'Ctrl+r'
 
 # Alias
 Set-Alias -Name ll -Value ls

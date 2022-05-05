@@ -77,7 +77,7 @@ else {
   }
   else {
     Write-Output ">> Creating profile configuration folder"
-    New-Item -ItemType Directory -Path  -ErrorAction SilentlyContinue
+    New-Item -ItemType Directory -Path $ProfileFolder -ErrorAction SilentlyContinue
   }
 
   # create profile file
@@ -157,16 +157,17 @@ else {
   }
   else {
     Write-Output ">> Installing PSReadline"
-    Install-Module PSReadline -Scope CurrentUser -Force
+    Install-Module PSReadline -AllowPrerelease -Scope CurrentUser -Force
   }
 
   #Install PsFzf
-  if (Get-Module -ListAvailable -Name PsFzf) {
-    Write-Output ">> PsFzf already installed"
+  if (Get-Module -ListAvailable -Name PSFzf) {
+    Write-Output ">> PSFzf already installed"
   }
   else {
-    Write-Output ">> Installing PsFzf"
-    Install-Module PsFzf -Scope CurrentUser -Force
+    Write-Output ">> Installing PSFzf"
+    scoop install fzf
+    Install-Module PSFzf -Scope CurrentUser -Force
   }
 }
 
