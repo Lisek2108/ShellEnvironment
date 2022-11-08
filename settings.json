@@ -4,7 +4,7 @@
   "antialiasingMode": "grayscale",
   "closeOnExit": "graceful",
   "colorScheme": "Custom",
-  "commandline": "pwsh.exe -NoExit -Command \"&{ $vsInstallPath=& \"${env:ProgramFiles(x86)}/'Microsoft Visual Studio'/Installer/vswhere.exe\" -products 'Microsoft.VisualStudio.Product.BuildTools'-property installationPath; Import-Module \"$vsInstallPath/Common7/Tools/Microsoft.VisualStudio.DevShell.dll\"; Enter-VsDevShell -VsInstallPath $vsInstallPath -SkipAutomaticLocation }\"",
+  "commandline": "pwsh.exe -NoExit -Command \"&{ $vsInstallPath=& \"${env:ProgramFiles(x86)}/'Microsoft Visual Studio'/Installer/vswhere.exe\" -products 'Microsoft.VisualStudio.Product.BuildTools'-property installationPath; Import-Module \"$vsInstallPath/Common7/Tools/Microsoft.VisualStudio.DevShell.dll\"; Enter-VsDevShell -VsInstallPath $vsInstallPath -SkipAutomaticLocation -DevCmdArguments '-arch=amd64 -host_arch=amd64'}\"",
   "cursorShape": "bar",
   "font": {
     "face": "MesloLGMDZ NF",
